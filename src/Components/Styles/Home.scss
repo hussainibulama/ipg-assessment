@@ -1,0 +1,75 @@
+@import 'Constants.scss';
+
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  min-width: 1280px;
+  max-width: 1600px;
+  .left-side-page-content {
+    position: relative;
+    width: 20%;
+  }
+  .right-side-page-content {
+    position: relative;
+    width: 80%;
+    @media screen and (min-width: 1400px) {
+      width: 90%;
+    }
+    @media screen and (min-width: 1500px) {
+      width: 100%;
+    }
+
+    .wrapper {
+      position: relative;
+      padding: 0px 24px;
+
+      .header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+        h3 {
+          font-family: $family;
+          font-size: 16px;
+          color: $color-black;
+          font-weight: 500;
+        }
+        form {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
+        }
+      }
+      .body_contents {
+        position: relative;
+        margin-top: 2em;
+        .weather_items {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+        .no_items {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          p {
+            font-family: $family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
+}

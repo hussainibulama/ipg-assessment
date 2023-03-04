@@ -1,0 +1,143 @@
+@import 'Constants.scss';
+
+.side_nav {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 43px 24px;
+  gap: 43px;
+  width: 210px;
+  min-height: 100vh;
+  height: 100%;
+  background: $color-white;
+  border-right: 1px solid $border-color-light;
+  .logo_side {
+    position: relative;
+    img {
+      position: relative;
+      width: 120px;
+      height: 28px;
+      object-fit: contain;
+    }
+  }
+  ul.list_parent {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    li {
+      position: relative;
+      width: 210px;
+      height: 25px;
+      transition: all 0.5s ease-in-out;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      padding-bottom: 1.5em;
+      &.with_child {
+        position: relative;
+        height: 120px;
+      }
+      span {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        height: 25px;
+        &.parent_link {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        &.active_parent {
+          border-left: 2px solid $color-green;
+          padding-left: 20px;
+          img {
+            color: $color-light-black;
+          }
+          p {
+            color: $color-light-black;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+        img {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+        p {
+          position: relative;
+          font-family: $family;
+          margin-left: 18px;
+          color: $color-light-black;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  ul.list_child {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin-left: 22px;
+    li {
+      position: relative;
+      min-width: 200px;
+      height: 25px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: pointer;
+      padding-top: 1em;
+      padding-bottom: 0;
+      span {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        &.active_child {
+          p {
+            color: $color-green;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+        img {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+        p {
+          position: relative;
+          font-family: $family;
+          margin-left: 18px;
+          color: $color-light-black;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
